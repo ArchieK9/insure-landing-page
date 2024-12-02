@@ -393,6 +393,7 @@ footer .social-links a:hover {
     .intro-text{
         background-image: url(./images/bg-pattern-intro-left-mobile.svg);
         background-repeat: no-repeat;
+        padding: 0 1rem;
     }
 
     section{
