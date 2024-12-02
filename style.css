@@ -195,6 +195,10 @@ footer>div>div>a{
     margin-bottom: .5rem;
 }
 
+.shorts{
+    text-align: left;
+}
+
 footer>div>div>a:hover{
     color: var(--Very-Dark-Violet);
     text-decoration: underline;
@@ -207,6 +211,7 @@ footer>div>div>a:hover{
 
 .socials{
     gap: 1rem;
+    justify-content: end;
 }
 
 .socials>a>img:hover{
@@ -237,44 +242,89 @@ footer .social-links a:hover {
 }
 
 @media(max-width : 768px){
+    
+    .intro-text, .img {
+        width: 100%;
+        height: 50%;
+    }
+    
 
-    .intro{
-        flex-direction: column-reverse !important;
+    .intro {
+        height: auto;
+        padding:0 !important;
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: var(--Dark-Violet);
+        margin-bottom: 15rem;
+    }  
+
+    .intro-text{
+        padding: 5rem 2rem !important;
+        text-align: center;
+    }
+
+    .intro-text>hr{
+        display: none;
     }
 
     .intro::before{
         content: '';
         background-image: url(./images/bg-pattern-intro-right-mobile.svg);
-        position: relative;
-        width: 50%;
+        position: absolute;
+        background-size: auto;
+        top: 65rem;
+        right: 1rem;
         height: 100%;
-        top: 0px;
-        right: 0px;
-        z-index: 1;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position-y: -5rem;
+        background-position-y: 0;
         background-position-x: right;
     }
     
     .intro::after{
         content: '';
         background-image: url(./images/bg-pattern-intro-left-mobile.svg);
-        background-position: left;
-        position: relative;
-        background-size: contain;
-        width: 50%;
-        background-repeat: no-repeat;
-        height: 100%;
-        top: 65%;
+        background-size: auto;
+        position: sticky;
+        top: 0px;
         left: 0px;
-        z-index: 1;
+        background-position-y: 925px;
+        background-position-x: left;
     }
 
     .img>img{
         position: relative;
+        width: 100%;
         top: 0;
-        width: auto;
+    }
+
+    .features{
+        text-align: center;
+    }
+
+    .features>hr{
+        margin: auto;
+    }
+
+    .column{
+        text-align: center;
+    }
+
+    .cta-text{
+        margin-bottom: 2rem;
+    }
+
+    .cta{
+        text-align: center;
+        background-image: url(./images/bg-pattern-how-we-work-mobile.svg);
+    }
+
+    .cta>div{
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer{
+        background-image: url(./images/bg-pattern-footer-mobile.svg);
     }
 
     .desktop{
@@ -283,5 +333,118 @@ footer .social-links a:hover {
 
     .mobile{
         display: block;
+    }
+}
+
+
+@media(max-width:425px){
+
+    .container{
+        display: flex !important; 
+        justify-content: space-between !important;
+        width: 100% !important;
+        margin: 1rem !important;
+    }
+
+    .navbar-collapse{
+        height: 60rem;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 5rem;
+        z-index: 2;
+    }
+    
+    .navbar-nav{
+        background-color: var(--Dark-Violet);
+        background-image: url(./images/bg-pattern-mobile-nav.svg);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position-y: 47rem;
+        height: inherit;
+        gap: 1rem;
+        padding-top: 5rem;
+        background-color: var(--Very-Dark-Violet);
+    }
+
+    .nav-item:nth-child(4){
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .nav-item>button{
+        text-transform: uppercase;
+        width: 100%;
+        color: #fff !important;
+        border-color: #fff !important;
+        background-color: transparent !important;
+    }
+
+    .intro::before{
+        content: '';
+        background-image: url(./images/bg-pattern-intro-right-mobile.svg);
+        top: 47rem;
+        right: 0rem;
+        height: 100%;
+        background-position-y: 0;
+        background-position-x: right;
+    }
+
+    .intro-text{
+        background-image: url(./images/bg-pattern-intro-left-mobile.svg);
+        background-repeat: no-repeat;
+    }
+
+    section{
+        padding: 1.5rem !important;
+    }
+
+    .cta{
+        margin: 0 !important;
+        padding: 2rem;
+    }
+
+    footer, .footer-logo, .footer-div{
+        justify-content: center !important;
+    }
+
+    .footer-hr{
+        display: none;
+    }
+
+    .socials{
+        margin-top: 2rem !important;
+        justify-content: center;
+    }
+
+    .shorts{
+        text-align: center;
+    }
+
+    .shorts:nth-child(4){
+        margin-bottom: 2rem;
+    }
+
+    .shorts>p{
+        margin: 2rem 0;
+    }
+
+}
+
+
+@media (max-width: 375px){
+
+    .intro::before{
+        content: '';
+        background-image: url(./images/bg-pattern-intro-right-mobile.svg);
+        top: 50rem;
+        right: 0rem;
+        height: 100%;
+        background-position-y: 0;
+        background-position-x: right;
+    }
+
+    .intro-text{
+        padding: 5rem !important;
     }
 }
